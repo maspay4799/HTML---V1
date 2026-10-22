@@ -56,9 +56,9 @@
             box-shadow: 0 0 25px rgba(245, 158, 11, 0.2);
         }
         @keyframes berdenyut {
-            0% { transform: scale(1); box-shadow: 0 0 10px rgba(245, 158, 11, 0.4); }
-            50% { transform: scale(1.06); box-shadow: 0 0 20px rgba(245, 158, 11, 0.8); }
-            100% { transform: scale(1); box-shadow: 0 0 10px rgba(245, 158, 11, 0.4); }
+            0% { transform: scale(1); box-shadow: 0 0 12px rgba(245, 158, 11, 0.5); }
+            50% { transform: scale(1.06); box-shadow: 0 0 25px rgba(245, 158, 11, 0.9); }
+            100% { transform: scale(1); box-shadow: 0 0 12px rgba(245, 158, 11, 0.5); }
         }
         .logo-animasi {
             animation: berdenyut 2.5s infinite ease-in-out;
@@ -79,7 +79,7 @@
 
             <!-- LOGO BESAR DI TENGAH & MENYALA -->
             <div class="flex flex-col items-center justify-center text-center">
-                <img src="LOGO.JPEG" alt="Logo Maspay" class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover border-2 border-gold-400 logo-animasi mb-2" onerror="this.style.display='none'">
+                <img src="LOGO.JPEG" alt="Logo Maspay" class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover border-2 border-gold-400 logo-animasi mb-2" onerror="this.onerror=null; this.src='LOGO.JPG'; if(this.src=='LOGO.JPG') { this.onerror=function(){this.src='logo.jpeg';}; this.src='LOGO.png'; }">
                 <div>
                     <span class="text-3xl font-extrabold tracking-wider gold-gradient">MASPAY</span>
                     <span class="block text-xs font-medium text-gray-400 tracking-widest">POINT BLANK STORE</span>
@@ -397,136 +397,4 @@
             </div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-8 pt-6 border-t border-gray-800 text-xs text-gray-500">
-            &copy; 2026 MASPAY - Point Blank Store. All rights reserved.
-        </div>
-    </footer>
-
-    <!-- Modal Form Pemesanan WhatsApp -->
-    <div id="orderModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
-        <div class="bg-cardbg rounded-2xl border border-gold-500/40 max-w-md w-full p-6 relative custom-glow">
-            <button onclick="closeOrderModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl"><i class="fa-solid fa-xmark"></i></button>
-            <h3 id="modalCategory" class="text-lg font-bold text-gold-400 mb-1">Kategori Layanan</h3>
-            <h2 id="modalItemName" class="text-xl font-bold text-white mb-2">Nama Paket</h2>
-            <div class="text-sm font-bold text-gold-500 bg-gold-500/10 p-2.5 rounded-xl border border-gold-500/20 mb-5 flex justify-between items-center">
-                <span>Harga Total:</span>
-                <span id="modalItemPrice" class="text-base">Rp 0</span>
-            </div>
-            
-            <form id="orderForm" onsubmit="sendToWhatsApp(event)" class="space-y-4">
-                <input type="hidden" id="inputCategory">
-                <input type="hidden" id="inputItemName">
-                <input type="hidden" id="inputItemPrice">
-                
-                <div>
-                    <label class="block text-xs font-semibold text-gray-300 mb-1.5">ID / Nickname Akun / Keterangan</label>
-                    <input type="text" id="userId" required placeholder="Contoh: MaspayPB" class="w-full px-4 py-2.5 rounded-xl bg-darkbg border border-gold-500/30 text-white text-sm focus:outline-none focus:border-gold-500">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-gray-300 mb-1.5">No WhatsApp Kamu (Pembeli)</label>
-                    <input type="number" id="userWa" required placeholder="Contoh: 08123456789" class="w-full px-4 py-2.5 rounded-xl bg-darkbg border border-gold-500/30 text-white text-sm focus:outline-none focus:border-gold-500">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-gray-300 mb-1.5">Metode Pembayaran</label>
-                    <select id="paymentMethod" class="w-full px-4 py-2.5 rounded-xl bg-darkbg border border-gold-500/30 text-white text-sm focus:outline-none focus:border-gold-500">
-                        <option value="DANA (087838871945 a.n Arif Bayu Utama)">DANA (087838871945 a.n Arif Bayu Utama)</option>
-                        <option value="QRIS / All Payment">QRIS / All Payment</option>
-                    </select>
-                </div>
-                <button type="submit" class="w-full py-3.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-black font-bold text-sm transition shadow-lg shadow-gold-500/20 flex items-center justify-center space-x-2 mt-4">
-                    <i class="fa-brands fa-whatsapp text-lg"></i>
-                    <span>LANJUT PEMBAYARAN & KIRIM KE WA</span>
-                </button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Modal Login Admin -->
-    <div id="adminModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
-        <div class="bg-cardbg rounded-2xl border border-gold-500/40 max-w-sm w-full p-6 relative custom-glow text-center">
-            <button onclick="tutupAdmin()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl"><i class="fa-solid fa-xmark"></i></button>
-            <div id="formLoginAdmin">
-                <h3 class="text-xl font-bold text-gold-400 mb-3"><i class="fa-solid fa-lock mr-2"></i>Login Admin</h3>
-                <input type="password" id="passAdmin" placeholder="Password Admin" class="w-full px-4 py-2.5 rounded-xl bg-darkbg border border-gold-500/30 text-white text-sm mb-4 focus:outline-none focus:border-gold-500">
-                <button onclick="prosesLogin()" class="w-full py-3 rounded-xl bg-gold-500 hover:bg-gold-400 text-black font-bold text-sm transition">Masuk</button>
-            </div>
-            <div id="panelAdmin" class="hidden">
-                <h3 class="text-xl font-bold text-gold-400 mb-3"><i class="fa-solid fa-chart-line mr-2"></i>Panel Admin</h3>
-                <p class="text-xs text-gray-300 mb-4">Riwayat pesanan masuk otomatis tercatat rapi di chat WhatsApp admin.</p>
-                <button onclick="tutupAdmin()" class="w-full py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-sm transition">Keluar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Script Interaktif -->
-    <script>
-        function copyDana() {
-            const text = document.getElementById('danaNumber').innerText;
-            navigator.clipboard.writeText(text);
-            const btnText = document.getElementById('copyText');
-            btnText.innerText = 'Disalin!';
-            setTimeout(() => { btnText.innerText = 'Salin'; }, 2000);
-        }
-
-        function selectItem(category, itemName, itemPrice) {
-            document.getElementById('modalCategory').innerText = category;
-            document.getElementById('modalItemName').innerText = itemName;
-            document.getElementById('modalItemPrice').innerText = 'Rp ' + itemPrice;
-            
-            document.getElementById('inputCategory').value = category;
-            document.getElementById('inputItemName').value = itemName;
-            document.getElementById('inputItemPrice').value = 'Rp ' + itemPrice;
-            
-            document.getElementById('orderModal').classList.remove('hidden');
-        }
-
-        function closeOrderModal() {
-            document.getElementById('orderModal').classList.add('hidden');
-        }
-
-        function bukaAdmin() {
-            document.getElementById('adminModal').classList.remove('hidden');
-            document.getElementById('formLoginAdmin').classList.remove('hidden');
-            document.getElementById('panelAdmin').classList.add('hidden');
-            document.getElementById('passAdmin').value = '';
-        }
-
-        function tutupAdmin() {
-            document.getElementById('adminModal').classList.add('hidden');
-        }
-
-        function prosesLogin() {
-            const pw = document.getElementById('passAdmin').value;
-            if (pw === "maspay123") {
-                document.getElementById('formLoginAdmin').classList.add('hidden');
-                document.getElementById('panelAdmin').classList.remove('hidden');
-            } else {
-                alert('Password salah!');
-            }
-        }
-
-        function sendToWhatsApp(e) {
-            e.preventDefault();
-            const category = document.getElementById('inputCategory').value;
-            const itemName = document.getElementById('inputItemName').value;
-            const itemPrice = document.getElementById('inputItemPrice').value;
-            const userId = document.getElementById('userId').value;
-            const userWa = document.getElementById('userWa').value;
-            const payment = document.getElementById('paymentMethod').value;
-
-            const adminPhone = '6287838871945';
-            const message = `Halo Admin MASPAY Store, saya ingin melakukan pemesanan / pembayaran layanan Point Blank:\n\n` +
-                            `📌 *Kategori:* ${category}\n` +
-                            `🎁 *Paket / Item:* ${itemName}\n` +
-                            `💰 *Total Harga:* ${itemPrice}\n` +
-                            `👤 *ID / Nick Game:* ${userId}\n` +
-                            `📱 *No WA Pemesan:* ${userWa}\n` +
-                            `💳 *Metode Pembayaran:* ${payment}\n\n` +
-                            `Mohon konfirmasi dan info tata cara pembayarannya ya kak, terimakasih!`;
-
-            const encodedURL = `https://wa.me/${adminPhone}?text=${encodeURIComponent(message)}`;
-            window.open(encodedURL, '_blank');
-            closeOrderModal();
-        }
-    </script>
-</body>
-</html>
+            &copy; 2026 MASPAY -
