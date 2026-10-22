@@ -535,5 +535,36 @@
             closeOrderModal();
         }
     </script>
+    <!-- KODE MAINTENANCE OTOMATIS & BERGERAK -->
+<div id="maintenance-mode" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #09090b; z-index: 999999; justify-content: center; align-items: center; text-align: center; color: white; padding: 20px;">
+    <style>
+        @keyframes kedipAnimasi {
+            0% { opacity: 0.3; }
+            50% { opacity: 1; }
+            100% { opacity: 0.3; }
+        }
+        .teks-bergerak {
+            animation: kedipAnimasi 2s infinite ease-in-out;
+        }
+    </style>
+    <div>
+        <i class="fa-solid fa-triangle-exclamation" style="font-size: 55px; color: #f59e0b; margin-bottom: 20px;"></i>
+        <h1 class="teks-bergerak" style="font-size: 26px; sm:font-size: 32px; font-weight: bold; color: #f59e0b; margin-bottom: 15px;">WEBSITE SEDANG DALAM PERBAIKAN</h1>
+        <p class="teks-bergerak" style="color: #d1d5db; font-size: 15px; max-width: 450px; margin: 0 auto 25px auto; font-weight: 500;">Mohon maaf, website sedang dalam perbaikan, mohon tunggu sebentar</p>
+        <span style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); color: #f59e0b; padding: 8px 18px; border-radius: 8px; font-size: 12px; font-weight: bold;">Terima kasih atas kesabarannya 🙏</span>
+    </div>
+</div>
+
+<script>
+    // CARA GANTI STATUSNYA:
+    // Kalau mau NORMAL: const isMaintenance = ~~true~~ false;
+    // Kalau mau MAINTENANCE: const isMaintenance = ~~false~~ true;
+    
+    const isMaintenance = false; 
+
+    if (isMaintenance) {
+        document.getElementById('maintenance-mode').style.display = 'flex';
+    }
+</script>
 </body>
 </html>
