@@ -48,17 +48,17 @@
             transition: all 0.2s ease;
         }
         .item-row:hover {
-            background-color: rgba(245, 158, 11, 0.15);
-            border-color: rgba(245, 158, 11, 0.6);
-            transform: translateX(3px);
+            background-color: rgba(245, 158, 11, 0.1);
+            border-color: rgba(245, 158, 11, 0.5);
+            transform: translateX(2px);
         }
         .custom-glow {
-            box-shadow: 0 0 25px rgba(245, 158, 11, 0.3);
+            box-shadow: 0 0 25px rgba(245, 158, 11, 0.2);
         }
         @keyframes berdenyut {
-            0% { transform: scale(1); box-shadow: 0 0 15px rgba(245, 158, 11, 0.5); }
-            50% { transform: scale(1.10); box-shadow: 0 0 30px rgba(245, 158, 11, 0.9); }
-            100% { transform: scale(1); box-shadow: 0 0 15px rgba(245, 158, 11, 0.5); }
+            0% { transform: scale(1); box-shadow: 0 0 10px rgba(245, 158, 11, 0.4); }
+            50% { transform: scale(1.06); box-shadow: 0 0 20px rgba(245, 158, 11, 0.8); }
+            100% { transform: scale(1); box-shadow: 0 0 10px rgba(245, 158, 11, 0.4); }
         }
         .logo-animasi {
             animation: berdenyut 2.5s infinite ease-in-out;
@@ -67,25 +67,27 @@
 </head>
 <body class="bg-darkbg text-gray-100 min-h-screen flex flex-col antialiased selection:bg-gold-500 selection:text-black">
 
-    <!-- Header / Navbar -->
+    <!-- Header / Navbar dengan Logo Besar di Tengah -->
     <header class="sticky top-0 z-50 bg-darkbg/95 backdrop-blur-md border-b border-gold-500/20 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             
+            <!-- Tombol Admin & WA di Kiri/Kanan (Desktop) -->
             <div class="hidden sm:flex items-center space-x-3">
                 <button onclick="bukaAdmin()" class="px-3.5 py-2 text-xs font-semibold text-gold-400 bg-gold-500/10 border border-gold-500/30 rounded-xl hover:bg-gold-500/20 transition">
                     <i class="fa-solid fa-lock mr-1"></i> Admin
                 </button>
             </div>
 
-            <!-- LOGO UTAMA DI TENGAH (Mendukung format .jpeg, .jpg, .png otomatis) -->
+            <!-- LOGO BESAR DI TENGAH -->
             <div class="flex flex-col items-center justify-center text-center">
-                <img src="LOGO.JPEG" alt="Logo Maspay" class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover border-2 border-gold-400 logo-animasi mb-2" onerror="this.onerror=null; this.src='LOGO.JPG'; if(this.src=='LOGO.JPG') { this.onerror=function(){this.src='logo.jpeg';}; this.src='LOGO.png'; }">
+                <img src="LOGO.JPEG" alt="Logo Maspay" class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover border-2 border-gold-400 logo-animasi mb-2" onerror="this.style.display='none'">
                 <div>
                     <span class="text-3xl font-extrabold tracking-wider gold-gradient">MASPAY</span>
                     <span class="block text-xs font-medium text-gray-400 tracking-widest">POINT BLANK STORE</span>
                 </div>
             </div>
 
+            <!-- Tombol WA & Menu di Kanan -->
             <div class="flex items-center space-x-3">
                 <button onclick="bukaAdmin()" class="sm:hidden px-3 py-2 text-xs font-semibold text-gold-400 bg-gold-500/10 border border-gold-500/30 rounded-xl">
                     <i class="fa-solid fa-lock"></i>
@@ -123,7 +125,7 @@
         </div>
     </section>
 
-    <!-- Main Content / Katalog Layanan LENGKAP -->
+    <!-- Main Content / Katalog Layanan -->
     <main id="layanan" class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
         
         <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 border-b border-gold-500/20 pb-4 gap-4">
@@ -140,7 +142,7 @@
             </div>
         </div>
 
-        <!-- GRID 6 KOTAK KATALOG -->
+        <!-- Grid Kategori Layanan LENGKAP -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <!-- 1. TOP UP CASH -->
@@ -165,4 +167,368 @@
                         <div onclick="selectItem('Top Up Cash', '12.000 Cash', '91.750')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
                             <span class="text-gray-300 font-medium">12.000 Cash</span><span class="text-gold-400 font-bold">Rp 91.750</span>
                         </div>
-                        <div onclick="selectItem('Top Up Cash', '24.000 Cash', '182
+                        <div onclick="selectItem('Top Up Cash', '24.000 Cash', '182.550')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">24.000 Cash</span><span class="text-gold-400 font-bold">Rp 182.550</span>
+                        </div>
+                        <div onclick="selectItem('Top Up Cash', '36.000 Cash', '273.550')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">36.000 Cash</span><span class="text-gold-400 font-bold">Rp 273.550</span>
+                        </div>
+                        <div onclick="selectItem('Top Up Cash', '60.000 Cash', '455.550')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">60.000 Cash</span><span class="text-gold-400 font-bold">Rp 455.550</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. GB EXP BUNDIR -->
+            <div class="bg-cardbg rounded-2xl p-6 gold-border flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/20 flex items-center justify-center text-gold-400 text-xl"><i class="fa-solid fa-bolt"></i></div>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-gold-500/10 text-gold-400 font-semibold border border-gold-500/20">Populer</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-1">GB EXP BUNDIR</h3>
+                    <p class="text-xs text-red-400 mb-4 font-medium"><i class="fa-solid fa-triangle-exclamation mr-1"></i> Wajib verif email</p>
+                    <div class="space-y-2.5 mb-6">
+                        <div onclick="selectItem('GB Exp Bundir', '1 JT EXP', '17.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">1 JT EXP</span><span class="text-gold-400 font-bold">Rp 17.000</span>
+                        </div>
+                        <div onclick="selectItem('GB Exp Bundir', '3 JT EXP', '22.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">3 JT EXP</span><span class="text-gold-400 font-bold">Rp 22.000</span>
+                        </div>
+                        <div onclick="selectItem('GB Exp Bundir', '5 JT EXP', '32.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">5 JT EXP</span><span class="text-gold-400 font-bold">Rp 32.000</span>
+                        </div>
+                        <div onclick="selectItem('GB Exp Bundir', '8 JT EXP', '52.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">8 JT EXP</span><span class="text-gold-400 font-bold">Rp 52.000</span>
+                        </div>
+                        <div onclick="selectItem('GB Exp Bundir', '10 JT EXP', '62.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">10 JT EXP</span><span class="text-gold-400 font-bold">Rp 62.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. GB EXP GLASS -->
+            <div class="bg-cardbg rounded-2xl p-6 gold-border flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/20 flex items-center justify-center text-gold-400 text-xl"><i class="fa-solid fa-skull"></i></div>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-gold-500/10 text-gold-400 font-semibold border border-gold-500/20">Fast Process</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-1">GB EXP GLASS</h3>
+                    <p class="text-xs text-red-400 mb-4 font-medium"><i class="fa-solid fa-triangle-exclamation mr-1"></i> Wajib sudah verif email</p>
+                    <div class="space-y-2.5 mb-6">
+                        <div onclick="selectItem('GB Exp Glass', '1 JT EXP', '18.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">1 JT EXP</span><span class="text-gold-400 font-bold">Rp 18.000</span>
+                        </div>
+                        <div onclick="selectItem('GB Exp Glass', '3 JT EXP', '26.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">3 JT EXP</span><span class="text-gold-400 font-bold">Rp 26.000</span>
+                        </div>
+                        <div onclick="selectItem('GB Exp Glass', '5 JT EXP', '38.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">5 JT EXP</span><span class="text-gold-400 font-bold">Rp 38.000</span>
+                        </div>
+                        <div onclick="selectItem('GB Exp Glass', '8 JT EXP', '61.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">8 JT EXP</span><span class="text-gold-400 font-bold">Rp 61.000</span>
+                        </div>
+                        <div onclick="selectItem('GB Exp Glass', '10 JT EXP', '73.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">10 JT EXP</span><span class="text-gold-400 font-bold">Rp 73.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. GB EXP CLAN -->
+            <div class="bg-cardbg rounded-2xl p-6 gold-border flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/20 flex items-center justify-center text-gold-400 text-xl"><i class="fa-solid fa-users"></i></div>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-gold-500/10 text-gold-400 font-semibold border border-gold-500/20">Clan Boost</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-1">GB EXP CLAN</h3>
+                    <p class="text-xs text-gray-400 mb-4">Min. Pangkat Diamond</p>
+                    <div class="space-y-2.5 mb-6">
+                        <div onclick="selectItem('GB Exp Clan', '5 JT EXP', '63.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">5 JT EXP</span><span class="text-gold-400 font-bold">Rp 63.000</span>
+                        </div>
+                        <div onclick="selectItem('GB Exp Clan', '10 JT EXP', '124.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">10 JT EXP</span><span class="text-gold-400 font-bold">Rp 124.000</span>
+                        </div>
+                        <div onclick="selectItem('GB Exp Clan', '30 JT EXP', '282.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">30 JT EXP</span><span class="text-gold-400 font-bold">Rp 282.000</span>
+                        </div>
+                        <div onclick="selectItem('GB Exp Clan', '50 JT EXP', '408.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">50 JT EXP</span><span class="text-gold-400 font-bold">Rp 408.000</span>
+                        </div>
+                        <div onclick="selectItem('GB Exp Clan', '100 JT EXP', '710.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">100 JT EXP</span><span class="text-gold-400 font-bold">Rp 710.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. GB KILL CHAR -->
+            <div class="bg-cardbg rounded-2xl p-6 gold-border flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/20 flex items-center justify-center text-gold-400 text-xl"><i class="fa-solid fa-crosshairs"></i></div>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-gold-500/10 text-gold-400 font-semibold border border-gold-500/20">Kill Service</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-1">GB KILL CHAR</h3>
+                    <p class="text-xs text-gray-400 mb-4">Request kill badan / HS</p>
+                    <div class="space-y-2.5 mb-6">
+                        <div onclick="selectItem('GB Kill Char', '10.000 Kill', '23.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">10.000 Kill</span><span class="text-gold-400 font-bold">Rp 23.000</span>
+                        </div>
+                        <div onclick="selectItem('GB Kill Char', '30.000 Kill', '43.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">30.000 Kill</span><span class="text-gold-400 font-bold">Rp 43.000</span>
+                        </div>
+                        <div onclick="selectItem('GB Kill Char', '50.000 Kill', '53.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">50.000 Kill</span><span class="text-gold-400 font-bold">Rp 53.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. GB EVENT & PASS -->
+            <div class="bg-cardbg rounded-2xl p-6 gold-border flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/20 flex items-center justify-center text-gold-400 text-xl"><i class="fa-solid fa-calendar-days"></i></div>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-gold-500/10 text-gold-400 font-semibold border border-gold-500/20">Special</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-1">GB EVENT & PASS</h3>
+                    <p class="text-xs text-gray-400 mb-4">Jasa absen, tittle, dan battle pass.</p>
+                    <div class="space-y-2.5 mb-6">
+                        <div onclick="selectItem('GB Event & Pass', 'Jasa Login Absen', '3.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">Jasa Login Absen</span><span class="text-gold-400 font-bold">Rp 3.000</span>
+                        </div>
+                        <div onclick="selectItem('GB Event & Pass', 'GB Full Tittle', '18.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">GB Full Tittle</span><span class="text-gold-400 font-bold">Rp 18.000</span>
+                        </div>
+                        <div onclick="selectItem('GB Event & Pass', 'GB BP Lev. 45', '20.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">GB BP Lev. 45</span><span class="text-gold-400 font-bold">Rp 20.000</span>
+                        </div>
+                        <div onclick="selectItem('GB Event & Pass', 'GB BP Lev. 50', '25.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">GB BP Lev. 50</span><span class="text-gold-400 font-bold">Rp 25.000</span>
+                        </div>
+                        <div onclick="selectItem('GB Event & Pass', 'GB BP Lev. 45 Prem', '115.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">GB BP Lev. 45 Prem</span><span class="text-gold-400 font-bold">Rp 115.000</span>
+                        </div>
+                        <div onclick="selectItem('GB Event & Pass', 'GB BP Lev. 50 Prem', '125.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
+                            <span class="text-gray-300 font-medium">GB BP Lev. 50 Prem</span><span class="text-gold-400 font-bold">Rp 125.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Informasi Pembayaran & Rekening -->
+    <section id="pembayaran" class="py-12 bg-cardbg border-t border-b border-gold-500/20 my-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl font-bold text-white mb-2 flex items-center justify-center space-x-2">
+                <i class="fa-solid fa-qrcode text-gold-500"></i>
+                <span>METODE PEMBAYARAN RESMI</span>
+            </h2>
+            <p class="text-gray-400 text-sm mb-8">Lakukan transfer pembayaran melalui akun resmi MASPAY di bawah ini.</p>
+            
+            <div class="bg-darkbg rounded-2xl p-6 sm:p-8 gold-border max-w-md mx-auto relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-blue-600 text-white text-xs px-3 py-1 rounded-bl-xl font-bold">E-WALLET</div>
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-14 h-14 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 text-2xl font-bold"><i class="fa-solid fa-wallet"></i></div>
+                    <div class="text-left">
+                        <h4 class="text-lg font-bold text-white">DANA (Dompet Digital)</h4>
+                        <p class="text-xs text-gray-400">Atas Nama: <span class="text-gold-400 font-semibold">ARIF BAYU UTAMA</span></p>
+                    </div>
+                </div>
+                
+                <div class="bg-cardbg rounded-xl p-4 border border-gold-500/20 flex items-center justify-between mb-4">
+                    <span id="danaNumber" class="text-lg sm:text-xl font-mono font-bold tracking-wider text-gold-400">087838871945</span>
+                    <button onclick="copyDana()" class="px-3 py-1.5 rounded-lg bg-gold-500 text-black font-bold text-xs hover:bg-gold-400 transition flex items-center space-x-1">
+                        <i class="fa-regular fa-copy"></i><span id="copyText">Salin</span>
+                    </button>
+                </div>
+                <p class="text-xs text-gray-400">⚠️ Mohon konfirmasi pengiriman bukti transfer ke WhatsApp admin setelah melakukan pembayaran.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Panduan Keamanan Akun -->
+    <section id="panduan" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mb-12">
+        <h2 class="text-2xl font-bold text-white text-center mb-8 flex items-center justify-center space-x-2">
+            <i class="fa-solid fa-shield-halved text-gold-500"></i>
+            <span>CARA MENGAMANKAN AKUN POINT BLANK</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-cardbg rounded-xl p-5 gold-border">
+                <div class="w-10 h-10 rounded-lg bg-gold-500/20 text-gold-400 flex items-center justify-center font-bold mb-3">1</div>
+                <h4 class="font-bold text-white mb-2">GANTI PASSWORD</h4>
+                <p class="text-xs text-gray-400 leading-relaxed">Setelah akun diterima, pembeli WAJIB segera mengganti password akun.</p>
+            </div>
+            <div class="bg-cardbg rounded-xl p-5 gold-border">
+                <div class="w-10 h-10 rounded-lg bg-gold-500/20 text-gold-400 flex items-center justify-center font-bold mb-3">2</div>
+                <h4 class="font-bold text-white mb-2">CEK KONDISI AKUN</h4>
+                <p class="text-xs text-gray-400 leading-relaxed">Login ke dalam game dan periksa seluruh item serta data akun dengan teliti.</p>
+            </div>
+            <div class="bg-cardbg rounded-xl p-5 gold-border">
+                <div class="w-10 h-10 rounded-lg bg-gold-500/20 text-gold-400 flex items-center justify-center font-bold mb-3">3</div>
+                <h4 class="font-bold text-white mb-2">VERIFIKASI EMAIL</h4>
+                <p class="text-xs text-gray-400 leading-relaxed">Pastikan melakukan verifikasi email secara mandiri untuk keamanan akun.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-cardbg border-t border-gold-500/20 py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div>
+                <div class="flex items-center justify-center md:justify-start space-x-3 mb-2">
+                    <span class="text-xl font-bold gold-gradient">MASPAY</span>
+                    <span class="text-xs text-gray-400">POINT BLANK STORE</span>
+                </div>
+                <p class="text-xs text-gray-400">Aman • Cepat • Terpercaya.</p>
+            </div>
+            <div class="flex items-center space-x-4 text-xl">
+                <a href="https://tiktok.com/@trdmaspay" target="_blank" class="w-10 h-10 rounded-full bg-darkbg border border-gold-500/30 flex items-center justify-center text-gray-300 hover:text-gold-400"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://youtube.com/@maspayreal" target="_blank" class="w-10 h-10 rounded-full bg-darkbg border border-gold-500/30 flex items-center justify-center text-gray-300 hover:text-gold-400"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://instagram.com/arifpopayph" target="_blank" class="w-10 h-10 rounded-full bg-darkbg border border-gold-500/30 flex items-center justify-center text-gray-300 hover:text-gold-400"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/6287838871945" target="_blank" class="w-10 h-10 rounded-full bg-darkbg border border-gold-500/30 flex items-center justify-center text-gray-300 hover:text-gold-400"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-8 pt-6 border-t border-gray-800 text-xs text-gray-500">
+            &copy; 2026 MASPAY - Point Blank Store. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Modal Form Pemesanan WhatsApp -->
+    <div id="orderModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-cardbg rounded-2xl border border-gold-500/40 max-w-md w-full p-6 relative custom-glow">
+            <button onclick="closeOrderModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl"><i class="fa-solid fa-xmark"></i></button>
+            <h3 id="modalCategory" class="text-lg font-bold text-gold-400 mb-1">Kategori Layanan</h3>
+            <h2 id="modalItemName" class="text-xl font-bold text-white mb-2">Nama Paket</h2>
+            <div class="text-sm font-bold text-gold-500 bg-gold-500/10 p-2.5 rounded-xl border border-gold-500/20 mb-5 flex justify-between items-center">
+                <span>Harga Total:</span>
+                <span id="modalItemPrice" class="text-base">Rp 0</span>
+            </div>
+            
+            <form id="orderForm" onsubmit="sendToWhatsApp(event)" class="space-y-4">
+                <input type="hidden" id="inputCategory">
+                <input type="hidden" id="inputItemName">
+                <input type="hidden" id="inputItemPrice">
+                
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-1.5">ID / Nickname Akun / Keterangan</label>
+                    <input type="text" id="userId" required placeholder="Contoh: MaspayPB" class="w-full px-4 py-2.5 rounded-xl bg-darkbg border border-gold-500/30 text-white text-sm focus:outline-none focus:border-gold-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-1.5">No WhatsApp Kamu (Pembeli)</label>
+                    <input type="number" id="userWa" required placeholder="Contoh: 08123456789" class="w-full px-4 py-2.5 rounded-xl bg-darkbg border border-gold-500/30 text-white text-sm focus:outline-none focus:border-gold-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-1.5">Metode Pembayaran</label>
+                    <select id="paymentMethod" class="w-full px-4 py-2.5 rounded-xl bg-darkbg border border-gold-500/30 text-white text-sm focus:outline-none focus:border-gold-500">
+                        <option value="DANA (087838871945 a.n Arif Bayu Utama)">DANA (087838871945 a.n Arif Bayu Utama)</option>
+                        <option value="QRIS / All Payment">QRIS / All Payment</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full py-3.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-black font-bold text-sm transition shadow-lg shadow-gold-500/20 flex items-center justify-center space-x-2 mt-4">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>LANJUT PEMBAYARAN & KIRIM KE WA</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Login Admin -->
+    <div id="adminModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-cardbg rounded-2xl border border-gold-500/40 max-w-sm w-full p-6 relative custom-glow text-center">
+            <button onclick="tutupAdmin()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl"><i class="fa-solid fa-xmark"></i></button>
+            <div id="formLoginAdmin">
+                <h3 class="text-xl font-bold text-gold-400 mb-3"><i class="fa-solid fa-lock mr-2"></i>Login Admin</h3>
+                <input type="password" id="passAdmin" placeholder="Password Admin" class="w-full px-4 py-2.5 rounded-xl bg-darkbg border border-gold-500/30 text-white text-sm mb-4 focus:outline-none focus:border-gold-500">
+                <button onclick="prosesLogin()" class="w-full py-3 rounded-xl bg-gold-500 hover:bg-gold-400 text-black font-bold text-sm transition">Masuk</button>
+            </div>
+            <div id="panelAdmin" class="hidden">
+                <h3 class="text-xl font-bold text-gold-400 mb-3"><i class="fa-solid fa-chart-line mr-2"></i>Panel Admin</h3>
+                <p class="text-xs text-gray-300 mb-4">Riwayat pesanan masuk otomatis tercatat rapi di chat WhatsApp admin.</p>
+                <button onclick="tutupAdmin()" class="w-full py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-sm transition">Keluar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Interaktif -->
+    <script>
+        function copyDana() {
+            const text = document.getElementById('danaNumber').innerText;
+            navigator.clipboard.writeText(text);
+            const btnText = document.getElementById('copyText');
+            btnText.innerText = 'Disalin!';
+            setTimeout(() => { btnText.innerText = 'Salin'; }, 2000);
+        }
+
+        function selectItem(category, itemName, itemPrice) {
+            document.getElementById('modalCategory').innerText = category;
+            document.getElementById('modalItemName').innerText = itemName;
+            document.getElementById('modalItemPrice').innerText = 'Rp ' + itemPrice;
+            
+            document.getElementById('inputCategory').value = category;
+            document.getElementById('inputItemName').value = itemName;
+            document.getElementById('inputItemPrice').value = 'Rp ' + itemPrice;
+            
+            document.getElementById('orderModal').classList.remove('hidden');
+        }
+
+        function closeOrderModal() {
+            document.getElementById('orderModal').classList.add('hidden');
+        }
+
+        function bukaAdmin() {
+            document.getElementById('adminModal').classList.remove('hidden');
+            document.getElementById('formLoginAdmin').classList.remove('hidden');
+            document.getElementById('panelAdmin').classList.add('hidden');
+            document.getElementById('passAdmin').value = '';
+        }
+
+        function tutupAdmin() {
+            document.getElementById('adminModal').classList.add('hidden');
+        }
+
+        function prosesLogin() {
+            const pw = document.getElementById('passAdmin').value;
+            if (pw === "maspay123") {
+                document.getElementById('formLoginAdmin').classList.add('hidden');
+                document.getElementById('panelAdmin').classList.remove('hidden');
+            } else {
+                alert('Password salah!');
+            }
+        }
+
+        function sendToWhatsApp(e) {
+            e.preventDefault();
+            const category = document.getElementById('inputCategory').value;
+            const itemName = document.getElementById('inputItemName').value;
+            const itemPrice = document.getElementById('inputItemPrice').value;
+            const userId = document.getElementById('userId').value;
+            const userWa = document.getElementById('userWa').value;
+            const payment = document.getElementById('paymentMethod').value;
+
+            const adminPhone = '6287838871945';
+            const message = `Halo Admin MASPAY Store, saya ingin melakukan pemesanan / pembayaran layanan Point Blank:\n\n` +
+                            `📌 *Kategori:* ${category}\n` +
+                            `🎁 *Paket / Item:* ${itemName}\n` +
+                            `💰 *Total Harga:* ${itemPrice}\n` +
+                            `👤 *ID / Nick Game:* ${userId}\n` +
+                            `📱 *No WA Pemesan:* ${userWa}\n` +
+                            `💳 *Metode Pembayaran:* ${payment}\n\n` +
+                            `Mohon konfirmasi dan info tata cara pembayarannya ya kak, terimakasih!`;
+
+            const encodedURL = `https://wa.me/${adminPhone}?text=${encodeURIComponent(message)}`;
+            window.open(encodedURL, '_blank');
+            closeOrderModal();
+        }
+    </script>
+</body>
+</html>
