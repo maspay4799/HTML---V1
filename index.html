@@ -55,7 +55,6 @@
         .custom-glow {
             box-shadow: 0 0 25px rgba(245, 158, 11, 0.2);
         }
-        /* Efek Animasi Logo Menyala Berdenyut */
         @keyframes berdenyut {
             0% { transform: scale(1); box-shadow: 0 0 10px rgba(245, 158, 11, 0.4); }
             50% { transform: scale(1.06); box-shadow: 0 0 20px rgba(245, 158, 11, 0.8); }
@@ -72,7 +71,6 @@
     <header class="sticky top-0 z-50 bg-darkbg/90 backdrop-blur-md border-b border-gold-500/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <!-- GAMBAR LOGO DENGAN EFEK MENYALA BERGERAK -->
                 <img src="file_00000000ebc48211814bc721bef6956d.png" alt="Logo Maspay" class="w-12 h-12 rounded-xl object-cover border border-gold-400 logo-animasi" onerror="this.style.display='none'">
                 <div>
                     <span class="text-2xl font-extrabold tracking-wider gold-gradient">MASPAY</span>
@@ -136,121 +134,96 @@
             </div>
         </div>
 
-        <!-- Grid Kategori Layanan -->
+        <!-- Grid Kategori Layanan (LENGKAP SEMUA) -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <!-- 1. TOP UP CASH -->
             <div class="bg-cardbg rounded-2xl p-6 gold-border flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-4">
-                        <div class="w-12 h-12 rounded-xl bg-gold-500/20 flex items-center justify-center text-gold-400 text-xl">
-                            <i class="fa-solid fa-wallet"></i>
-                        </div>
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/20 flex items-center justify-center text-gold-400 text-xl"><i class="fa-solid fa-wallet"></i></div>
                         <span class="text-xs px-2.5 py-1 rounded-md bg-gold-500/10 text-gold-400 font-semibold border border-gold-500/20">Instant</span>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-1">TOP UP CASH</h3>
                     <p class="text-xs text-gray-400 mb-4">Cash Point Blank Zepetto resmi.</p>
-                    
                     <div class="space-y-2.5 mb-6">
                         <div onclick="selectItem('Top Up Cash', '1.200 Cash', '9.250')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
-                            <span class="text-gray-300 font-medium flex items-center space-x-2"><i class="fa-solid fa-circle-dot text-xs text-gold-500"></i><span>1.200 Cash</span></span>
-                            <span class="text-gold-400 font-bold">Rp 9.250</span>
+                            <span class="text-gray-300 font-medium">1.200 Cash</span><span class="text-gold-400 font-bold">Rp 9.250</span>
                         </div>
                         <div onclick="selectItem('Top Up Cash', '2.400 Cash', '18.550')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
-                            <span class="text-gray-300 font-medium flex items-center space-x-2"><i class="fa-solid fa-circle-dot text-xs text-gold-500"></i><span>2.400 Cash</span></span>
-                            <span class="text-gold-400 font-bold">Rp 18.550</span>
+                            <span class="text-gray-300 font-medium">2.400 Cash</span><span class="text-gold-400 font-bold">Rp 18.550</span>
                         </div>
                         <div onclick="selectItem('Top Up Cash', '6.000 Cash', '46.250')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
-                            <span class="text-gray-300 font-medium flex items-center space-x-2"><i class="fa-solid fa-circle-dot text-xs text-gold-500"></i><span>6.000 Cash</span></span>
-                            <span class="text-gold-400 font-bold">Rp 46.250</span>
+                            <span class="text-gray-300 font-medium">6.000 Cash</span><span class="text-gold-400 font-bold">Rp 46.250</span>
                         </div>
                         <div onclick="selectItem('Top Up Cash', '12.000 Cash', '91.750')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
-                            <span class="text-gray-300 font-medium flex items-center space-x-2"><i class="fa-solid fa-circle-dot text-xs text-gold-500"></i><span>12.000 Cash</span></span>
-                            <span class="text-gold-400 font-bold">Rp 91.750</span>
+                            <span class="text-gray-300 font-medium">12.000 Cash</span><span class="text-gold-400 font-bold">Rp 91.750</span>
                         </div>
                         <div onclick="selectItem('Top Up Cash', '24.000 Cash', '182.550')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
-                            <span class="text-gray-300 font-medium flex items-center space-x-2"><i class="fa-solid fa-circle-dot text-xs text-gold-500"></i><span>24.000 Cash</span></span>
-                            <span class="text-gold-400 font-bold">Rp 182.550</span>
+                            <span class="text-gray-300 font-medium">24.000 Cash</span><span class="text-gold-400 font-bold">Rp 182.550</span>
                         </div>
                         <div onclick="selectItem('Top Up Cash', '36.000 Cash', '273.550')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
-                            <span class="text-gray-300 font-medium flex items-center space-x-2"><i class="fa-solid fa-circle-dot text-xs text-gold-500"></i><span>36.000 Cash</span></span>
-                            <span class="text-gold-400 font-bold">Rp 273.550</span>
+                            <span class="text-gray-300 font-medium">36.000 Cash</span><span class="text-gold-400 font-bold">Rp 273.550</span>
                         </div>
                         <div onclick="selectItem('Top Up Cash', '60.000 Cash', '455.550')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
-                            <span class="text-gray-300 font-medium flex items-center space-x-2"><i class="fa-solid fa-circle-dot text-xs text-gold-500"></i><span>60.000 Cash</span></span>
-                            <span class="text-gold-400 font-bold">Rp 455.550</span>
+                            <span class="text-gray-300 font-medium">60.000 Cash</span><span class="text-gold-400 font-bold">Rp 455.550</span>
                         </div>
                     </div>
                 </div>
-                <div class="text-center text-xs text-gold-400/80 font-medium"><i class="fa-solid fa-arrow-pointer mr-1"></i> Klik nominal di atas untuk pesan</div>
             </div>
 
             <!-- 2. GB EXP BUNDIR -->
             <div class="bg-cardbg rounded-2xl p-6 gold-border flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-4">
-                        <div class="w-12 h-12 rounded-xl bg-gold-500/20 flex items-center justify-center text-gold-400 text-xl">
-                            <i class="fa-solid fa-bolt"></i>
-                        </div>
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/20 flex items-center justify-center text-gold-400 text-xl"><i class="fa-solid fa-bolt"></i></div>
                         <span class="text-xs px-2.5 py-1 rounded-md bg-gold-500/10 text-gold-400 font-semibold border border-gold-500/20">Populer</span>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-1">GB EXP BUNDIR</h3>
-                    <p class="text-xs text-red-400 mb-4 font-medium"><i class="fa-solid fa-triangle-exclamation mr-1"></i> Wajib verif email (Datapolos tidak bisa)</p>
-                    
+                    <p class="text-xs text-red-400 mb-4 font-medium"><i class="fa-solid fa-triangle-exclamation mr-1"></i> Wajib verif email</p>
                     <div class="space-y-2.5 mb-6">
                         <div onclick="selectItem('GB Exp Bundir', '1 JT EXP', '17.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
-                            <span class="text-gray-300 font-medium flex items-center space-x-2"><i class="fa-solid fa-circle-dot text-xs text-gold-500"></i><span>1 JT EXP</span></span>
-                            <span class="text-gold-400 font-bold">Rp 17.000</span>
+                            <span class="text-gray-300 font-medium">1 JT EXP</span><span class="text-gold-400 font-bold">Rp 17.000</span>
                         </div>
                         <div onclick="selectItem('GB Exp Bundir', '3 JT EXP', '22.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
-                            <span class="text-gray-300 font-medium flex items-center space-x-2"><i class="fa-solid fa-circle-dot text-xs text-gold-500"></i><span>3 JT EXP</span></span>
-                            <span class="text-gold-400 font-bold">Rp 22.000</span>
+                            <span class="text-gray-300 font-medium">3 JT EXP</span><span class="text-gold-400 font-bold">Rp 22.000</span>
                         </div>
                         <div onclick="selectItem('GB Exp Bundir', '5 JT EXP', '32.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
-                            <span class="text-gray-300 font-medium flex items-center space-x-2"><i class="fa-solid fa-circle-dot text-xs text-gold-500"></i><span>5 JT EXP</span></span>
-                            <span class="text-gold-400 font-bold">Rp 32.000</span>
+                            <span class="text-gray-300 font-medium">5 JT EXP</span><span class="text-gold-400 font-bold">Rp 32.000</span>
                         </div>
                         <div onclick="selectItem('GB Exp Bundir', '8 JT EXP', '52.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
-                            <span class="text-gray-300 font-medium flex items-center space-x-2"><i class="fa-solid fa-circle-dot text-xs text-gold-500"></i><span>8 JT EXP</span></span>
-                            <span class="text-gold-400 font-bold">Rp 52.000</span>
+                            <span class="text-gray-300 font-medium">8 JT EXP</span><span class="text-gold-400 font-bold">Rp 52.000</span>
                         </div>
                         <div onclick="selectItem('GB Exp Bundir', '10 JT EXP', '62.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
-                            <span class="text-gray-300 font-medium flex items-center space-x-2"><i class="fa-solid fa-circle-dot text-xs text-gold-500"></i><span>10 JT EXP</span></span>
-                            <span class="text-gold-400 font-bold">Rp 62.000</span>
+                            <span class="text-gray-300 font-medium">10 JT EXP</span><span class="text-gold-400 font-bold">Rp 62.000</span>
                         </div>
                     </div>
                 </div>
-                <div class="text-center text-xs text-gold-400/80 font-medium"><i class="fa-solid fa-arrow-pointer mr-1"></i> Klik paket di atas untuk pesan</div>
             </div>
 
             <!-- 3. GB EXP GLASS -->
             <div class="bg-cardbg rounded-2xl p-6 gold-border flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-4">
-                        <div class="w-12 h-12 rounded-xl bg-gold-500/20 flex items-center justify-center text-gold-400 text-xl">
-                            <i class="fa-solid fa-skull"></i>
-                        </div>
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/20 flex items-center justify-center text-gold-400 text-xl"><i class="fa-solid fa-skull"></i></div>
                         <span class="text-xs px-2.5 py-1 rounded-md bg-gold-500/10 text-gold-400 font-semibold border border-gold-500/20">Fast Process</span>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-1">GB EXP GLASS</h3>
                     <p class="text-xs text-red-400 mb-4 font-medium"><i class="fa-solid fa-triangle-exclamation mr-1"></i> Wajib sudah verif email</p>
-                    
                     <div class="space-y-2.5 mb-6">
                         <div onclick="selectItem('GB Exp Glass', '1 JT EXP', '18.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
-                            <span class="text-gray-300 font-medium flex items-center space-x-2"><i class="fa-solid fa-circle-dot text-xs text-gold-500"></i><span>1 JT EXP</span></span>
-                            <span class="text-gold-400 font-bold">Rp 18.000</span>
+                            <span class="text-gray-300 font-medium">1 JT EXP</span><span class="text-gold-400 font-bold">Rp 18.000</span>
                         </div>
                         <div onclick="selectItem('GB Exp Glass', '3 JT EXP', '26.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
-                            <span class="text-gray-300 font-medium flex items-center space-x-2"><i class="fa-solid fa-circle-dot text-xs text-gold-500"></i><span>3 JT EXP</span></span>
-                            <span class="text-gold-400 font-bold">Rp 26.000</span>
+                            <span class="text-gray-300 font-medium">3 JT EXP</span><span class="text-gold-400 font-bold">Rp 26.000</span>
                         </div>
                         <div onclick="selectItem('GB Exp Glass', '5 JT EXP', '38.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
-                            <span class="text-gray-300 font-medium flex items-center space-x-2"><i class="fa-solid fa-circle-dot text-xs text-gold-500"></i><span>5 JT EXP</span></span>
-                            <span class="text-gold-400 font-bold">Rp 38.000</span>
+                            <span class="text-gray-300 font-medium">5 JT EXP</span><span class="text-gold-400 font-bold">Rp 38.000</span>
                         </div>
                         <div onclick="selectItem('GB Exp Glass', '8 JT EXP', '61.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
-                            <span class="text-gray-300 font-medium flex items-center space-x-2"><i class="fa-solid fa-circle-dot text-xs text-gold-500"></i><span>8 JT EXP</span></span>
-                            <span class="text-gold-400 font-bold">Rp 61.000</span>
+                            <span class="text-gray-300 font-medium">8 JT EXP</span><span class="text-gold-400 font-bold">Rp 61.000</span>
                         </div>
                         <div onclick="selectItem('GB Exp Glass', '10 JT EXP', '73.000')" class="item-row flex justify-between items-center text-sm p-3 rounded-lg bg-darkbg/60 border border-gold-500/10 cursor-pointer">
-                            <span class="text-gray-300 font-medium flex items-center
+                            <span class="text-gray-300 font-medium">10 JT EXP</span><span class="text-gold-400 font-bold">Rp 73.000</span>
+                        </div>
+                    </div>
